@@ -3,15 +3,16 @@ package customview.lukfook.com.customview.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import customview.lukfook.com.customview.views.CustomView;
 import customview.lukfook.com.customview.R;
+import customview.lukfook.com.customview.views.PorterDuffView;
 
 public class MainActivity extends AppCompatActivity {
 
     //我们自定义的View
-    private CustomView mCustomView;
+//    private CustomView mCustomView;
+    private PorterDuffView mPorterDuffView;
     //半径值
-    private int radiu;
+//    private int radiu;
 
 
     @Override
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //获取控件
-        mCustomView = (CustomView) findViewById(R.id.main_cv);
+//        mCustomView = (CustomView) findViewById(R.id.main_cv);
+        mPorterDuffView = (PorterDuffView) findViewById(R.id.main_pdv);
 
         /**
          * 开线程

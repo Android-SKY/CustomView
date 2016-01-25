@@ -24,9 +24,9 @@ public class PorterDuffView extends View {
     private static final PorterDuff.Mode MODE = PorterDuff.Mode.ADD;
 
     //左右上方示例渐变正方形的尺寸大小
-    private static final int RECT_SIZE_SMALL = 400;
+    private static final int RECT_SIZE_SMALL = 200;
     //中间测试渐变正方形的尺寸大小
-    private static final int RECT_SIZE_BIG = 800;
+    private static final int RECT_SIZE_BIG = 400;
 
     //画笔
     private Paint mPaint;
@@ -88,5 +88,39 @@ public class PorterDuffView extends View {
 
         //设置画布颜色为黑色以便我们更好地观察
         canvas.drawColor(Color.BLACK);
+
+        //设置业务对象尺寸值计算生成左右上方的渐变正方形
+        porterDuffBO.setSize(RECT_SIZE_SMALL);
+
+        /**
+         * 画出左右上方两个正方形
+         * 其中左边的为src右边的为dis
+         */
+        canvas.drawBitmap(porterDuffBO.initSrcBitmap(), s_l, s_t, mPaint);
+        canvas.drawBitmap(porterDuffBO.initDisBitmap(), d_l, d_t, mPaint);
+
+        /**
+         * 将绘制操作保存到新的图层（更官方的说法应该是离屏缓存）
+         */
+        int sc = canvas.saveLayer(0, 0, screenW, screenH, null, Canvas.ALL_SAVE_FLAG);
+
+        //重新设置业务对象尺寸值计算生成中间的渐变正方形
+        porterDuffBO.setSize(RECT_SIZE_BIG);
+
+        //先绘制dis目标图
+        canvas.drawBitmap(porterDuffBO.initDisBitmap(), rectX, rectY, mPaint);
+
+        //设置混合模式
+        mPaint.setXfermode(porterDuffXfermode);
+
+        //再绘制src源图
+        canvas.drawBitmap(porterDuffBO.initSrcBitmap(), rectX, rectY, mPaint);
+
+        //还原混合模式
+        mPaint.setXfermode(null);
+
+        //还原画布
+        canvas.restoreToCount(sc);
+
     }
 }
