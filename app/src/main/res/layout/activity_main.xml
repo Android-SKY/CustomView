@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <customview.lukfook.com.customview.views.DisInView
-        android:id="@+id/main_div"
+    <customview.lukfook.com.customview.views.ClockView
+        android:id="@+id/main_cvo"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
