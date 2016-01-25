@@ -4,13 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import customview.lukfook.com.customview.R;
-import customview.lukfook.com.customview.views.PorterDuffView;
+import customview.lukfook.com.customview.views.DisInView;
 
 public class MainActivity extends AppCompatActivity {
 
     //我们自定义的View
 //    private CustomView mCustomView;
-    private PorterDuffView mPorterDuffView;
+//    private PorterDuffView mPorterDuffView;
+    private DisInView mDisInView;
     //半径值
 //    private int radiu;
 
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         //获取控件
 //        mCustomView = (CustomView) findViewById(R.id.main_cv);
-        mPorterDuffView = (PorterDuffView) findViewById(R.id.main_pdv);
+//        mPorterDuffView = (PorterDuffView) findViewById(R.id.main_pdv);
+        mDisInView = (DisInView) findViewById(R.id.main_div);
 
         /**
          * 开线程

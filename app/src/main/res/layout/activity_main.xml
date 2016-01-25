@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <customview.lukfook.com.customview.views.PorterDuffView
-        android:id="@+id/main_pdv"
+    <customview.lukfook.com.customview.views.DisInView
+        android:id="@+id/main_div"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
