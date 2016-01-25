@@ -21,7 +21,7 @@ public class PorterDuffView extends View {
      * PorterDuff模式常量
      * 可以在次更改不同的测试模式
      */
-    private static final PorterDuff.Mode MODE = PorterDuff.Mode.ADD;
+    private static final PorterDuff.Mode MODE = PorterDuff.Mode.DST_OUT;
 
     //左右上方示例渐变正方形的尺寸大小
     private static final int RECT_SIZE_SMALL = 200;
