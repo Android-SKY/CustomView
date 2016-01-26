@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import customview.lukfook.com.customview.R;
-import customview.lukfook.com.customview.views.EraserView;
+import customview.lukfook.com.customview.views.FontView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
 //    private DisOutView mDisOutView;
 //    private ScreenView mScreenView;
 //    private ClockView mClockView;
-    private EraserView mEraserView;
+//    private EraserView mEraserView;
+    private FontView mFontView;
     //半径值
 //    private int radiu;
 
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
 //        mDisOutView = (DisOutView) findViewById(R.id.main_dov);
 //        mScreenView = (ScreenView) findViewById(R.id.main_sv);
 //        mClockView = (ClockView) findViewById(R.id.main_cvo);
-        mEraserView = (EraserView) findViewById(R.id.main_ev);
+//        mEraserView = (EraserView) findViewById(R.id.main_ev);
+        mFontView = (FontView) findViewById(R.id.main_fv);
         /**
          * 开线程
          */

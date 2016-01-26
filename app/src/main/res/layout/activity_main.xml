@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <customview.lukfook.com.customview.views.EraserView
-        android:id="@+id/main_ev"
+    <customview.lukfook.com.customview.views.FontView
+        android:id="@+id/main_fv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
